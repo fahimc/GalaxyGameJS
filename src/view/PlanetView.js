@@ -2,7 +2,7 @@ var PlanetView=function(){
 	this.galaxyX=0;
 	this.galaxyY=0;
 	this.sun;
-	this.nextX=0;
+	this.nextX=50;
 	this.build=function()
 	{
 		Class._super(this,"build");

@@ -16,6 +16,7 @@
 		// start coding here!
 		Event.addListener(DataLoader, DataLoader.DATA_LOAD_COMPLETE, onDataLoaded);
 		DataLoader.init();
+		Utensil.addListener(window,"resize",onResize);
 	}
 
 	function onDataLoaded() {
@@ -67,7 +68,12 @@
 		document.body.appendChild(galaxyView.display);
 		planetView = null;
 	}
-
+	function onResize()
+	{
+		if(galaxyView)galaxyView.arrange();
+		if(navView)navView.arrange();
+		if(planetView)planetView.arrange();
+	}
 	Main();
 }
 )(window); 
