@@ -16,16 +16,17 @@ var GameData = {
 		
 	},
 	createGalaxy : function(x,y) {
-		var random = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
-		if (random == 1)
+		var random = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+		if (random >10)
 			return;
 		//set n the number of planets
 		var galaxies = model.get(Const.gameData).galaxy;
 		var min = model.get(Const.galaxyData).minPlanets;
 		var max = model.get(Const.galaxyData).maxPlanets;
-		
+		var containsSun = (Math.floor(Math.random() * (1 - 0 + 1)) + 0)==1?true:false;
 		var galaxy = {
-			planets : []
+			planets : [],
+			containsSun:containsSun
 		};
 		galaxy.numberOfPlanets = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -47,7 +48,7 @@ var GameData = {
 		};
 
 		//set a random size
-		var random = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+		random = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 		var index = 1;
 		for (var name in planetsData.size) {
 			if (index == random) {
@@ -58,9 +59,24 @@ var GameData = {
 		}
 
 		//get a planet type
-		type = Math.floor(Math.random() * ((planetsData.planets.length - 1) - 0 + 1)) + 0;
+		var type = Math.floor(Math.random() * ((planetsData.planets.length - 1) - 0 + 1)) + 0;
+		
+		//remove habittable planets if no sun
+		if(!galaxy.containsSun)
+		{
+			var habitable=true;
+			while(habitable)
+			{
+				if(model.get(Const.planetsData).planets[type].habitable==false)
+				{
+					habitable=false;
+				}else{
+					type = Math.floor(Math.random() * ((planetsData.planets.length - 1) - 0 + 1)) + 0;
+				}
+			}
+		}
 		planet.type = type;
-
+		
 		//add resources
 		if (model.get(Const.planetsData).planets[type].hasResource)
 			this.createResources(planet);

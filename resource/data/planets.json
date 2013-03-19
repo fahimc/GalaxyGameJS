@@ -12,20 +12,32 @@
 	},
 	"planets": [
 		{
-			"name": "moon",
+			"name": "Moon",
 			"techLevel": 2,
 			"scienceLevel": 2,
 			"energyLevel": 2,
 			"hasResource":true,
-			"habitable":true
+			"habitable":true,
+			"image":"resource/image/moon.png"
+			
 		},
 		{
-			"name": "sun",
+			"name": "Blue Moon",
 			"techLevel": 0,
 			"scienceLevel": 0,
 			"energyLevel": 6,
 			"hasResource":false,
-			"habitable":false
+			"habitable":false,
+			"image":"resource/image/bluemoon.png"
+		},
+		{
+			"name": "Earth",
+			"techLevel": 0,
+			"scienceLevel": 0,
+			"energyLevel": 6,
+			"hasResource":false,
+			"habitable":true,
+			"image":"resource/image/earth.png"
 		}
 	]
 }

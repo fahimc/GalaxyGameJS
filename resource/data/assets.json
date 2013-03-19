@@ -1,8 +1,11 @@
 {
 	"galaxy": {
-		"path": "resource/image/galaxy.jpg"
+		"path": "resource/image/galaxy.png"
 	},
 	"sun": {
-		"path": "resource/image/sun.jpg"
+		"path": "resource/image/sun.png"
+	},
+	"galaxyButton": {
+		"path": "resource/image/galaxyButton.png"
 	}
 }
