@@ -1,0 +1,31 @@
+{
+	"size": {
+		"small": {
+			"population": 300
+		},
+		"meduim": {
+			"population": 600
+		},
+		"large": {
+			"population": 1200
+		}
+	},
+	"planets": [
+		{
+			"name": "moon",
+			"techLevel": 2,
+			"scienceLevel": 2,
+			"energyLevel": 2,
+			"hasResource":true,
+			"habitable":true
+		},
+		{
+			"name": "sun",
+			"techLevel": 0,
+			"scienceLevel": 0,
+			"energyLevel": 6,
+			"hasResource":false,
+			"habitable":false
+		}
+	]
+}

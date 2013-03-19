@@ -1,0 +1,8 @@
+{
+	"galaxy": {
+		"path": "resource/image/galaxy.jpg"
+	},
+	"sun": {
+		"path": "resource/image/sun.jpg"
+	}
+}

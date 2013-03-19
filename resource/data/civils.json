@@ -1,0 +1,12 @@
+{
+	"civils": [
+		{
+			"type": 0,
+			"tech": 2,
+			"science": 2,
+			"food": 3,
+			"enery": 3,
+			"ecnomy": 3
+		}
+	]
+}

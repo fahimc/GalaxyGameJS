@@ -1,0 +1,46 @@
+{
+	"max": 5,
+	"resources": [
+		{
+			"name": "water",
+			"food": 2,
+			"energy": 2,
+			"tech": 2,
+			"science": 2,
+			"economy": 1,
+			"amount": 200
+		}, {
+			"name": "gold",
+			"food": 0,
+			"energy": 0,
+			"tech": 2,
+			"science": 2,
+			"economy": 50,
+			"amount": 50
+		}, {
+			"name": "silver",
+			"food": 0,
+			"energy": 0,
+			"tech": 2,
+			"science": 2,
+			"economy": 50,
+			"amount": 50
+		}, {
+			"name": "zinc",
+			"food": 0,
+			"energy": 0,
+			"tech": 2,
+			"science": 2,
+			"economy": 50,
+			"amount": 50
+		}, {
+			"name": "platinum",
+			"food": 0,
+			"energy": 0,
+			"tech": 2,
+			"science": 2,
+			"economy": 50,
+			"amount": 50
+		}
+	]
+}
